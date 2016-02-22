@@ -7,17 +7,15 @@
 # ******** CONFIG (CHANGES ALLOWED IN THIS SECTION) ********
 
 # paths
-etc_nginx="/usr/local/etc/nginx"
-etc_apache="/usr/local/etc/apache22/extra"
-hosting="/u1/www";
+. script.properties
 
 # internal vars
 nginx_a="$etc_nginx/sites-available"
 nginx_e="$etc_nginx/sites-enabled"
-nginx_template="$nginx_a/_template_yii.conf"
+nginx_template="templates/_template_yii_nginx.conf"
 apache_a="$etc_apache/sites-available"
 apache_e="$etc_apache/sites-enabled"
-apache_template="$apache_a/_template_yii.conf"
+apache_template="templates/_template_yii_apache.conf"
 
 
 # ******** INPUT ********
@@ -84,6 +82,9 @@ cp $nginx_template $nginx_conf
 # replace template
 sed -i "" "s/{{hostname}}/${hostname}/g" $nginx_conf
 sed -i "" "s/{{username}}/${username}/g" $nginx_conf
+sed -i "" 's|{{hosting}}|'$hosting'|g' $nginx_conf
+sed -i "" 's|{{nginx_listen}}|'$nginx_listen'|g' $nginx_conf
+sed -i "" 's|{{apache_listen}}|'$apache_listen'|g' $nginx_conf
 
 # enable
 ln -s $nginx_conf "$nginx_e/$fname"
@@ -100,6 +101,9 @@ cp $apache_template $apache_conf
 # replace template
 sed -i "" "s/{{hostname}}/${hostname}/g" $apache_conf
 sed -i "" "s/{{username}}/${username}/g" $apache_conf
+sed -i "" 's|{{hosting}}|'$hosting'|g' $apache_conf
+sed -i "" 's|{{email}}|'$email'|g' $apache_conf
+sed -i "" 's|{{apache_listen}}|'$apache_listen'|g' $apache_conf
 
 # enable 
 ln -s $apache_conf "$apache_e/$fname"
