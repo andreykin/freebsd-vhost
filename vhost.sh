@@ -3,19 +3,22 @@
 # author: Andrey V. Kapustin
 # email: mail@andreyko.ru
 
+# ********* CHECK SYMLINK ********
+DIR="$(dirname "$(readlink -f "$0")")"
+
 
 # ******** CONFIG (CHANGES ALLOWED IN THIS SECTION) ********
 
 # paths
-. script.properties
+. $DIR/script.properties
 
 # internal vars
 nginx_a="$etc_nginx/sites-available"
 nginx_e="$etc_nginx/sites-enabled"
-nginx_template="templates/_template_yii_nginx.conf"
+nginx_template="$DIR/templates/_template_yii_nginx.conf"
 apache_a="$etc_apache/sites-available"
 apache_e="$etc_apache/sites-enabled"
-apache_template="templates/_template_yii_apache.conf"
+apache_template="$DIR/templates/_template_yii_apache.conf"
 
 
 # ******** INPUT ********

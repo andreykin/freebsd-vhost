@@ -3,11 +3,14 @@
 # author: Andrey V. Kapustin
 # email: mail@andreyko.ru
 
+# ********* CHECK SYMLINK ********
+DIR="$(dirname "$(readlink -f "$0")")"
+
 
 # ******** CONFIG (CHANGES ALLOWED IN THIS SECTION ********
 
 # props
-. script.properties
+. $DIR/script.properties
 
 # paths
 nginx_a="$etc_nginx/sites-available"
