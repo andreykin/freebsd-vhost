@@ -4,7 +4,7 @@ Basic script, which:
 - promt $hostname, $username and $password;
 - add FreeBSD user with given $username and $password;
 - create apache and nginx `$username.conf` files in `sites-available` dirs from `_template_yii.conf` templates with `{{username}}` and `{{hostname}}` placeholders;
-- create symlinks in`sites-enabled` dirs;
+- create `sites-enabled` symlinks;
 - restart
 
 ## Usage
