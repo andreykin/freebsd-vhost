@@ -40,7 +40,7 @@ sh rmhost.sh
 # for deleteting with file removal
 sh rmhost.sh -f
 ```
-### or after adding symlink to sbin
+or (after adding symlink to /usr/sbin)
 ```shell
 # for adding host
 vhost
