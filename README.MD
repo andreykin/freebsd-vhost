@@ -1,6 +1,6 @@
 # FreeBSD "add virtual host" shell script
 
-Basic script, which:
+This basic script:
 - promt $hostname, $username and $password;
 - add FreeBSD user with given $username and $password;
 - create apache and nginx `$username.conf` files in `sites-available` dirs from `_template_yii.conf` templates with `{{username}}` and `{{hostname}}` placeholders;
