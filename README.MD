@@ -33,7 +33,12 @@ echo 'Include etc/apache24/extra/sites-enabled/*.conf' >> /usr/local/etc/apache2
 
 ### Every time
 ```shell
+# for adding host
 sh vhost.sh
+# for deleteting host (removes user and disable config files)
+sh rmhost.sh
+# for deleteting with file removal
+sh rmhost.sh -f
 ```
 
 ## TODO:
