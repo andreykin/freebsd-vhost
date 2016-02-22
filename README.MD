@@ -12,7 +12,7 @@ Basic script, which:
 ### First time
 1. Edit `vhosts.sh` to adapt paths according to your configuration (I use `/u1/www` for host files locations);
 2. If you use `apache 2.4` instead of `apache 2.2` version, change `apache22` to `apache24` lines in `vhosts.sh`;
-3. If not exist create `_template_yii.conf` template files in apache and nginx `sites-available` dirs. Use `{{username}}` and `{{hostname}}` placeholders for username and hostname values;
+3. Create `_template_yii.conf` template files in apache and nginx `sites-available` dirs. Use `{{username}}` and `{{hostname}}` placeholders for username and hostname values;
 3. Modify your apache config file to use new directory structure
 
 For Apache 2.2:
