@@ -1,4 +1,4 @@
-# FreeBDS "vhost add" shell script
+# FreeBDS "add virtual host" shell script
 
 Basic script, which:
 - promts $hostname, $username and $password;
