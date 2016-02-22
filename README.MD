@@ -1,4 +1,4 @@
-# FreeBDS "add virtual host" shell script
+# FreeBSD "add virtual host" shell script
 
 Basic script, which:
 - promts $hostname, $username and $password;
