@@ -9,7 +9,7 @@ Basic script, which:
 
 ## Usage
 
-1. Adapt paths according to your configuration (I use `/u1/www/$username` for host files locations);
+1. Adapt paths according to your configuration (I use `/u1/www` for host files locations);
 2. If not exist create `_template_yii.conf` template files in apache and nginx `sites-available` dirs. Use `{{username}}` and `{{hostname}}` placeholders for username and hostname values;
 3. ```sh vhost.sh```
 
