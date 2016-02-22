@@ -3,18 +3,18 @@
 This basic script:
 - promt $hostname, $username and $password;
 - add FreeBSD user with given $username and $password;
-- create apache and nginx `$username.conf` in `sites-available` from `templates` with `{{username}}` and `{{hostname}}` and other placeholders;
+- create apache and nginx `$username.conf` in `sites-available` from templates with `{{username}}` and `{{hostname}}` and other placeholders;
 - create `sites-enabled` symlinks;
 - restart
 
-Templates folder incuded apache and nginx templates for my favorite yii1 php framework, you feel free change it as you like.
+[Templates](templates) folder incuded apache and nginx templates for my favorite yii1 php framework, you feel change it as you like.
 
 ## Usage 
 
 ### First time
-1. Edit `script.properties` to adapt paths according to your configuration (I use `/u1/www` for host files locations):
+1. Modify [script.properties](script.properties) according to your configuration (I use `/u1/www` for host files locations):
     - If you use Apache 2.4 instead of Apache 2.2 version, change `apache22` to `apache24`
-1. Edit `_template_yii_*.conf` template files. Use `{{username}}` and `{{hostname}}` placeholders for username and hostname values;
+1. Edit [_template_yii_apache](templates/_template_yii_apache.conf)  and [_template_yii_nginx](templates/_template_yii_nginx.conf) conf files. Use `{{username}}` and `{{hostname}}` placeholders for username and hostname. Also you may use some values from properties file;
 1. Modify your apache config file to use new directory structure:
 
 for Apache 2.2:
