@@ -20,7 +20,7 @@ apache_e="$etc_apache/sites-enabled"
 
 usage()
 {
-    echo "usage: rmhost [[[-f] [-i]] | [-h]]"
+    echo "usage: rmhost [ [-f] | [-h] ]"
 }
 
 delete_user()
