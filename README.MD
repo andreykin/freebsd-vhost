@@ -40,6 +40,15 @@ sh rmhost.sh
 # for deleteting with file removal
 sh rmhost.sh -f
 ```
+### or after adding symlink to sbin
+```shell
+# for adding host
+vhost
+# for deleteting host (removes user and disable config files)
+rmhost
+# for deleteting with file removal
+rmhost -f
+```
 
 ## TODO:
 - add custom template names;
