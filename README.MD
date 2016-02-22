@@ -1,4 +1,5 @@
-# FreeBSD "add virtual host" shell script
+# FreeBSD "add virtual host" shell script with config and templates
+
 
 This basic script:
 - promt $hostname, $username and $password;
