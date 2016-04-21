@@ -22,7 +22,7 @@ for Apache 2.2:
 ```shell
 mkdir /usr/local/etc/apache22/extra/sites-available;
 mkdir /usr/local/etc/apache22/extra/sites-enabled;
-echo 'Include etc/apache22/extra/sites-enabled/*.conf' >> /usr/local/etc/apache24/extra/httpd-vhosts.conf;
+echo 'Include etc/apache22/extra/sites-enabled/*.conf' >> /usr/local/etc/apache22/extra/httpd-vhosts.conf;
 ```
 for Apache 2.4:
 ```shell
