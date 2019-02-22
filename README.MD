@@ -53,3 +53,5 @@ rmhost -f
 ## TODO:
 - add custom template names;
 - add some validation rules;
+- add php-fmp;
+- add mysql;
