@@ -65,6 +65,7 @@ EOP
 mkdir "$www/html"
 mkdir "$www/log"
 mkdir "$www/sessions"
+mkdir "$www/tmp"
 chown -R $username:$username $www
 
 
