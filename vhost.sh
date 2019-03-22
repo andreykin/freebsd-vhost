@@ -19,6 +19,7 @@ nginx_template="$DIR/templates/_template_yii_nginx.conf"
 apache_a="$etc_apache/sites-available"
 apache_e="$etc_apache/sites-enabled"
 apache_template="$DIR/templates/_template_yii_apache.conf"
+logrotate_template="$DIR/templates/_logrotate_www.conf"
 
 
 # ******** INPUT ********
@@ -112,3 +113,17 @@ sed -i "" 's|{{apache_listen}}|'$apache_listen'|g' $apache_conf
 # enable 
 ln -s $apache_conf "$apache_e/$fname"
 apachectl restart
+
+# ******** LOGROTATE CONFIG ********
+
+logrotate_conf="$etc_logrotate/www_$username"
+
+# create file
+cp $logrotate_template $logrotate_conf
+
+# replace template
+sed -i "" "s/{{username}}/${username}/g" $logrotate_conf
+sed -i "" 's|{{hosting}}|'$hosting'|g' $logrotate_conf
+
+# run first time
+logrotate -f $logrotate_conf
