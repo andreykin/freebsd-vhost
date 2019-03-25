@@ -1,5 +1,7 @@
 # FreeBSD "add virtual host" shell script with config and templates
 
+## WARNING ##
+This code is not fully ready for production, at the moment only application templates are of interest. Run the script at your own risk. Read the source code carefully and adapt it to your application.
 
 This basic script:
 - promt $hostname, $username and $password;
