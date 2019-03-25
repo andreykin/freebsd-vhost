@@ -48,6 +48,7 @@ delete_conf()
 	echo "deleting .conf symlinks"
 	rm $apache_e/$username.conf
 	rm $nginx_e/$username.conf
+	rm $etc_logrotate/www_$username.conf
 
 	if [ "$to_delete_files" = "1" ]; then
 		echo "deleting .conf files"
