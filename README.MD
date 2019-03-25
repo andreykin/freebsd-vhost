@@ -16,9 +16,9 @@ This basic script:
 
 ### First time
 1. Modify [script.properties](script.properties) according to your configuration (I use `/u1/www` for host files locations):
-    - If you use Apache 2.4 instead of Apache 2.2 version, change `apache22` to `apache24`
-1. Edit [_template_yii_apache](templates/_template_yii_apache.conf)  and [_template_yii_nginx](templates/_template_yii_nginx.conf) conf files. Use `{{username}}` and `{{hostname}}` placeholders for username and hostname. Also you may use some values from properties file;
-1. Modify your apache config file to use new directory structure:
+    - If you use Apache 2.4 instead of Apache 2.2 version, change `apache22` to `apache24` (Issue #6);
+1. Edit [_apache_yii1](templates/_apache_yii1.conf)  and [_nginx_yii1_mod_php](templates/_nginx_yii1_mod_php.conf) conf files. Use `{{username}}` and `{{hostname}}` placeholders for username and hostname or change template names in souce code. (TODO: ISSUES #3, #4). Also you may use some values from properties file.
+1. Modify your apache config file to use new directory structure (Issue #6):
 
 for Apache 2.2:
 ```shell

@@ -15,10 +15,10 @@ DIR="$(dirname "$(readlink -f "$0")")"
 # internal vars
 nginx_a="$etc_nginx/sites-available"
 nginx_e="$etc_nginx/sites-enabled"
-nginx_template="$DIR/templates/_template_yii_nginx.conf"
+nginx_template="$DIR/templates/_nginx_yii1_mod_php.conf"
 apache_a="$etc_apache/sites-available"
 apache_e="$etc_apache/sites-enabled"
-apache_template="$DIR/templates/_template_yii_apache.conf"
+apache_template="$DIR/templates/_apache_yii1.conf"
 logrotate_template="$DIR/templates/_logrotate_www.conf"
 
 
