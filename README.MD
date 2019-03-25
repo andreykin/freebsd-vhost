@@ -10,7 +10,7 @@ This basic script:
 - create `sites-enabled` symlinks;
 - restart
 
-[Templates](templates) folder incuded apache and nginx templates for my favorite yii1 php framework, you feel change it as you like.
+[Templates](templates) folder incuded apache and nginx templates for yii1, yii2 php frameworks, LMS Moodle, you feel change it as you like.
 
 ## Usage 
 
