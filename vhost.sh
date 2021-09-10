@@ -15,10 +15,10 @@ DIR="$(dirname "$(readlink -f "$0")")"
 # internal vars
 nginx_a="$etc_nginx/sites-available"
 nginx_e="$etc_nginx/sites-enabled"
-nginx_template="$DIR/templates/_nginx_yii1_mod_php.conf"
-apache_a="$etc_apache/sites-available"
-apache_e="$etc_apache/sites-enabled"
-apache_template="$DIR/templates/_apache_yii1.conf"
+nginx_template="$DIR/templates/_nginx_moodle_ssl.conf"
+#apache_a="$etc_apache/sites-available"
+#apache_e="$etc_apache/sites-enabled"
+#apache_template="$DIR/templates/_apache_yii1.conf"
 logrotate_template="$DIR/templates/_logrotate_www.conf"
 
 
@@ -29,8 +29,8 @@ read -p "Hostname: " hostname
 read -p "Username: " username
 stty -echo
 read -r -p "FTP password: " password
-echo ""
-read -r -p "MySQL password: " password_mysql
+# echo ""
+# read -r -p "MySQL password: " password_mysql
 echo ""
 stty echo
 
@@ -72,7 +72,7 @@ chown -R $username:$username $www
 
 # ******** MYSQL USER ********
 
-
+# TODO:
 
 
 # ******** NGINX CONFIG ********
@@ -98,21 +98,21 @@ service nginx restart
 
 # ******** APACHE CONFIG ********
 
-apache_conf="$apache_a/$fname"
+# apache_conf="$apache_a/$fname"
 
 # create file
-cp $apache_template $apache_conf
+# cp $apache_template $apache_conf
 
 # replace template
-sed -i "" "s/{{hostname}}/${hostname}/g" $apache_conf
-sed -i "" "s/{{username}}/${username}/g" $apache_conf
-sed -i "" 's|{{hosting}}|'$hosting'|g' $apache_conf
-sed -i "" 's|{{email}}|'$email'|g' $apache_conf
-sed -i "" 's|{{apache_listen}}|'$apache_listen'|g' $apache_conf
+# sed -i "" "s/{{hostname}}/${hostname}/g" $apache_conf
+# sed -i "" "s/{{username}}/${username}/g" $apache_conf
+# sed -i "" 's|{{hosting}}|'$hosting'|g' $apache_conf
+# sed -i "" 's|{{email}}|'$email'|g' $apache_conf
+# sed -i "" 's|{{apache_listen}}|'$apache_listen'|g' $apache_conf
 
 # enable 
-ln -s $apache_conf "$apache_e/$fname"
-apachectl restart
+# ln -s $apache_conf "$apache_e/$fname"
+# apachectl restart
 
 # ******** LOGROTATE CONFIG ********
 
